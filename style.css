@@ -653,3 +653,96 @@ footer {
     white-space: pre-wrap;
     word-break: break-all;
 }
+
+.gb-input-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.gb-input-row input {
+    flex: 1;
+}
+
+.guestbook-entry-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.guestbook-action-btn {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.guestbook-action-btn:hover {
+    color: var(--accent-color);
+}
+
+/* Guestbook Password Modal */
+#gb-password-modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gb-modal-content {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+}
+
+.gb-modal-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.gb-modal-content input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+.gb-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gb-modal-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.gb-modal-btn.confirm {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.gb-modal-btn.cancel {
+    background-color: #eee;
+    color: var(--text-main);
+}
