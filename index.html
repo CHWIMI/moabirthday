@@ -136,7 +136,10 @@
                 <h2 class="section-title">방명록</h2>
                 <div class="guestbook-container">
                     <form id="guestbook-form" class="guestbook-form">
-                        <input type="text" id="gb-name" placeholder="이름 (생략가능)" maxlength="15">
+                        <div class="gb-input-row">
+                            <input type="text" id="gb-name" placeholder="이름 (생략가능)" maxlength="15">
+                            <input type="password" id="gb-password" placeholder="비밀번호(4자리)" maxlength="4" required>
+                        </div>
                         <textarea id="gb-message" placeholder="모아에게 축하 메시지를 남겨주세요! (최대 200자)" maxlength="200"
                             required></textarea>
                         <button type="submit" class="primary-btn submit-btn">메시지 남기기</button>
