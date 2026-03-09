@@ -388,6 +388,35 @@ header {
 
 /* --- Tier Styles (Design Proposal 1) --- */
 
+/* Tier 4 (VVIP - Gradient) */
+.sponsor-item.tier-4 {
+    border: 2.5px solid transparent;
+    background-image: linear-gradient(#FFF5F6, #FFF5F6), linear-gradient(135deg, #FF6680, #FFD700);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 20px rgba(255, 102, 128, 0.4);
+}
+
+.sponsor-item.tier-4:hover {
+    box-shadow: 0 0 30px rgba(255, 102, 128, 0.7);
+}
+
+.sponsor-item.tier-4 .sponsor-name,
+.sponsor-item.tier-4 .sponsor-amount {
+    background: linear-gradient(135deg, #FF4D6D, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.sponsor-item.tier-4 .sponsor-name {
+    font-size: 1.25rem;
+}
+
+.sponsor-item.tier-4 .sponsor-amount {
+    font-size: 1.5rem;
+}
+
 /* Tier 3 (Highest) */
 .sponsor-item.tier-3 {
     border: 2px solid #FF8DA1;
@@ -945,3 +974,4 @@ footer {
     color: var(--text-main);
 
 }
+
