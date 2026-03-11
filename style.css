@@ -547,6 +547,8 @@ header {
 .credits-list p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .credits-list strong {
