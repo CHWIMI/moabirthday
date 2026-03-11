@@ -224,7 +224,7 @@ header {
     box-shadow: var(--shadow);
 }
 
-.billboard-container img {
+.billboard-container>img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -275,6 +275,7 @@ header {
     cursor: pointer;
     user-select: none;
     touch-action: manipulation;
+    word-break: keep-all;
 }
 
 .artwork-desc {
@@ -293,6 +294,14 @@ header {
 
 .artwork-artist strong {
     color: var(--text-main);
+}
+
+/* Easter Egg Icon */
+.easter-egg-icon {
+    width: auto;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-bottom: 4px;
 }
 
 /* Sponsors List */
@@ -1007,4 +1016,3 @@ footer {
     color: var(--text-main);
 
 }
-
