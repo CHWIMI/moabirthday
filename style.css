@@ -99,7 +99,7 @@ button {
 }
 
 .main-title {
-    font-size: 2rem;
+    font-size: clamp(1.1rem, 6vw, 2rem);
     margin-bottom: 0.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
@@ -108,6 +108,7 @@ button {
     font-size: 1.1rem;
     color: var(--text-light);
     margin-bottom: 2rem;
+    word-break: keep-all;
 }
 
 .primary-btn {
@@ -468,42 +469,26 @@ header {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
+    grid-gap: 3px;
+    /* Thin gap like Instagram */
 }
 
 .gallery-item {
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
     cursor: pointer;
-    background-color: var(--white);
+    background-color: #f0f0f0;
+    /* Placeholder background */
     position: relative;
-    /* For frame effect */
-    padding: 10px;
-    /* Frame width */
+    /* Removed padding, shadow, and border-radius for flat look */
 }
 
-/* Inner frame shadow effect */
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-    border-radius: 15px;
-    z-index: 1;
-}
+/* Inner frame shadow effect removed */
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    /* Inner picture corner */
     transition: var(--transition);
 }
 
@@ -758,26 +743,21 @@ footer {
         font-size: 0.9rem;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on tablet/large mobile */
-    }
+    /* Removed 768px specific 2-column override to keep 3 columns everywhere */
 }
 
 @media screen and (max-width: 480px) {
-    .main-title {
-        font-size: 1.5rem;
-    }
-
     .gallery-grid {
-        grid-template-columns: 1fr;
-        /* 1 column on small screens */
-        grid-gap: 1rem;
+        /* Keep 3 columns on mobile, but tighten the gap and let it stretch edge-to-edge if needed */
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2px;
+        margin: 0 -1rem;
+        /* Negative margin to pull slightly past the 1rem container padding to touch edges more closely */
     }
 
     .gallery-item {
-        max-width: 350px;
-        margin: 0 auto;
+        max-width: 100%;
+        margin: 0;
     }
 
     .video-container {
