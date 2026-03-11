@@ -376,6 +376,7 @@ header {
     position: relative;
     z-index: 1;
     /* Above ribbon */
+    word-break: keep-all;
 }
 
 /* Ribbon Decoration (Right Bottom Tilt) */
@@ -1006,3 +1007,4 @@ footer {
     color: var(--text-main);
 
 }
+
