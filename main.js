@@ -63,13 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const snsName = btn.getAttribute('data-sns');
             const link = snsLinks[snsName];
 
-            if (link && link !== 'https://chzzk.naver.com/' && link !== 'https://youtube.com/' && link !== 'https://instagram.com/' && link !== 'https://cafe.naver.com/') {
-                // 정확한 주소가 입력되었을 때만 열리도록 처리 (임시 방어코드)
-                window.open(link, '_blank');
-            } else if (link) {
-                window.open(link, '_blank'); // 현재는 기본 링크로도 열리게 둠
+            if (link) {
+                window.open(link, '_blank', 'noopener,noreferrer');
             } else {
-                alert(`[${snsName}] 기능은 준비중입니다.`);
+                alert(`[${snsName}] 올바른 링크가 아닙니다.`);
             }
         });
     });
@@ -115,15 +112,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
 
             if (clickCount >= 5) {
-                // Use safer DOM manipulation instead of innerHTML
-                artworkTitle.textContent = '모아는 티라노가 맞다 ';
+                // Use safer DOM manipulation
+                artworkTitle.textContent = '모아는 티라노가 ';
+
+                const wrapper = document.createElement('span');
+                wrapper.style.whiteSpace = 'nowrap';
+                wrapper.textContent = '맞다\u00A0';
+
                 const img = document.createElement('img');
                 img.src = 'favicon.png';
                 img.alt = '티라노 뫄';
-                img.style.height = '1.2em';
-                img.style.verticalAlign = 'middle';
-                img.style.marginBottom = '4px';
-                artworkTitle.appendChild(img);
+                img.classList.add('easter-egg-icon'); // 스타일은 CSS에서 관리
+
+                wrapper.appendChild(img);
+                artworkTitle.appendChild(wrapper);
+
                 isEasterEggTriggered = true;
                 clickCount = 0;
             }
