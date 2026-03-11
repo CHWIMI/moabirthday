@@ -115,8 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
 
             if (clickCount >= 5) {
-                // Change textContent to innerHTML to allow image tag
-                artworkTitle.innerHTML = '모아는 티라노가 맞다 <img src="favicon.png" alt="티라노 뫄" style="height: 1.2em; vertical-align: middle; margin-bottom: 4px;">';
+                // Use safer DOM manipulation instead of innerHTML
+                artworkTitle.textContent = '모아는 티라노가 맞다 ';
+                const img = document.createElement('img');
+                img.src = 'favicon.png';
+                img.alt = '티라노 뫄';
+                img.style.height = '1.2em';
+                img.style.verticalAlign = 'middle';
+                img.style.marginBottom = '4px';
+                artworkTitle.appendChild(img);
                 isEasterEggTriggered = true;
                 clickCount = 0;
             }
