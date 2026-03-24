@@ -313,7 +313,7 @@ if (editForm) {
             return;
         }
 
-        if (newMessage.split(/\r\n|\r|\n/).length > 7) {
+        if (newMessage.split(/\r\n|\r|\n/).length > 11) {
             alert('메시지는 최대 7줄까지만 입력할 수 있습니다.');
             return;
         }
