@@ -31,7 +31,7 @@ const submitBtn = form?.querySelector('.submit-btn');
 
 let currentUser = null;
 let guestbookLoaded = false;
-let currentLimit = 3; // 더 보기 버튼용 상태값
+let currentLimit = 20; // 더 보기 버튼용 상태값
 let unsubscribe = null; // onSnapshot 리스너 해제용
 
 // 익명 로그인 수행
@@ -329,7 +329,7 @@ if (editForm) {
 const loadMoreBtn = document.getElementById('load-more-btn');
 if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', () => {
-        currentLimit += 3; // 50개 추가로 제한을 늘림
+        currentLimit += 20; // 50개 추가로 제한을 늘림
         loadGuestbook(); // 데이터 재요청
     });
 }
