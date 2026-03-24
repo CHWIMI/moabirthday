@@ -329,7 +329,7 @@ if (editForm) {
 const loadMoreBtn = document.getElementById('load-more-btn');
 if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', () => {
-        currentLimit += 20; // 50개 추가로 제한을 늘림
+        currentLimit += 20; // 20개 추가로 제한을 늘림
         loadGuestbook(); // 데이터 재요청
     });
 }
