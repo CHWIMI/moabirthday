@@ -31,7 +31,7 @@ const submitBtn = form?.querySelector('.submit-btn');
 
 // ===== 방명록 마감일 설정 =====
 // 이 날짜 이후에는 새 글 작성, 수정, 삭제가 불가
-const GUESTBOOK_DEADLINE = new Date('2026-01-01T00:00:00+09:00');
+const GUESTBOOK_DEADLINE = new Date('2026-04-15T00:00:00+09:00');
 const isGuestbookClosed = new Date() > GUESTBOOK_DEADLINE;
 
 let currentUser = null;
