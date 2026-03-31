@@ -286,7 +286,7 @@ function loadGuestbook() {
                             opacityStyle = 'style="opacity: 0.5;"';
                             actionButtons += `
                                 <div class="guestbook-entry-actions">
-                                    <button class="guestbook-action-btn unblind-btn" data-id="${change.doc.id}" style="color: #28a745; border-color: #28a745;">👁️ 복구하기</button>
+                                    <button class="guestbook-action-btn unblind-btn" data-id="${change.doc.id}" style="color: #28a745; border-color: #28a745;">🩹 복구하기</button>
                                     <button class="guestbook-action-btn delete-btn" data-id="${change.doc.id}">삭제</button>
                                 </div>
                             `;
