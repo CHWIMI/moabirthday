@@ -75,7 +75,7 @@ onAuthStateChanged(auth, (user) => {
                 nameInput.value = user.displayName;
             }
         } else {
-            googleLoginBtn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" style="width: 20px; height: 20px;">구글 계정으로 연동';
+            googleLoginBtn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" style="width: 20px; height: 20px;">구글 로그인';
             googleLoginBtn.style.backgroundColor = '#fff';
             googleLoginBtn.style.color = '#555';
             googleLoginBtn.style.borderColor = '#ddd';
