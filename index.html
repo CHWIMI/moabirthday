@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://www.gstatic.com https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://www.gstatic.com https://img.youtube.com https://via.placeholder.com data:; frame-src 'self' https://www.youtube.com https://moabirthday-2b4f2.firebaseapp.com; connect-src https://firestore.googleapis.com https://www.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firebase.googleapis.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com;">
+    <title>0409, Happy birthday to Moa</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chwimi.github.io/moabirthday/">
+    <meta property="og:title" content="0409, Happy birthday to Moa">
+    <meta property="og:description" content="모아의 생일을 진심으로 축하합니다!">
+    <meta property="og:image" content="https://chwimi.github.io/moabirthday/main.webp">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+    <!-- Intro Page -->
+    <section id="intro-page" class="page-section active">
+        <div class="intro-content">
+            <h1 class="main-title">0409, Happy&nbsp;birthday&nbsp;to<br>Moa</h1>
+            <p class="subtitle">모아의 생일을 진심으로 축하합니다</p>
+            <button id="enter-btn" class="primary-btn">생일 카페 가기</button>
+        </div>
+    </section>
+
+    <!-- Main Page -->
+    <section id="main-page" class="page-section hidden">
+        <!-- Header & Navigation -->
+        <header>
+            <nav>
+                <ul class="menu-bar">
+                    <li><button class="nav-btn active" data-target="billboard">전광판</button></li>
+                    <li><button class="nav-btn" data-target="gallery">팬아트</button></li>
+                    <li><button class="nav-btn" data-target="theater">팬영상</button></li>
+                    <li><button class="nav-btn" data-target="guestbook">방명록</button></li>
+                    <li><button class="nav-btn" data-target="sponsors">후원자</button></li>
+                    <li><button class="nav-btn" data-target="credits">크레딧</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="content-container">
+
+            <!-- Section: 전광판 (Billboard) -->
+            <section id="billboard" class="content-section active">
+                <div class="billboard-container">
+                    <picture>
+                        <source srcset="main.webp" type="image/webp">
+                        <img src="main.jpg" alt="Main Billboard (Moa Birthday)">
+                    </picture>
+                    <div class="artwork-plaque">
+                        <div class="plaque-header">
+                            <h3 class="artwork-title">모아는 청초가 맞다</h3>
+                        </div>
+                        <p class="artwork-desc">반박 안 받는다</p>
+                        <p class="artwork-artist"><strong>Artist:</strong> 원더</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: 팬아트 -->
+            <section id="gallery" class="content-section hidden">
+                <h2 class="section-title">팬아트</h2>
+                <div class="gallery-grid">
+                    <!-- 3x3 Grid Items -->
+                    <!-- 1. 동굴맨_ -->
+                    <div class="gallery-item" data-src="img/fanart/2m.webp" data-author="동굴맨_" data-desc="공주님 탄신일 추카추카">
+                        <img src="img/fanart/2t.webp" alt="Fanart 2">
+                    </div>
+                    <!-- 2. 말랑젤리 -->
+                    <div class="gallery-item" data-src="img/fanart/3m.webp" data-author="말랑젤리" data-desc="청초 뫄">
+                        <img src="img/fanart/3t.webp" class="pos-top" alt="Fanart 3">
+                    </div>
+                    <!-- 3. 원더 - 크리스마스뫄 -->
+                    <div class="gallery-item" data-src="img/fanart/6m.webp" data-author="원더" data-desc="내년엔 진짜 다키뫄쿠라">
+                        <img src="img/fanart/6t.webp" class="pos-top" alt="Fanart 6">
+                    </div>
+                    <!-- 4. 원더 - 사실 경멸 뫄라노 -->
+                    <div class="gallery-item" data-src="img/fanart/5m.webp" data-author="원더" data-desc="사실 경멸 뫄라노지롱-★">
+                        <img src="img/fanart/5t.webp" alt="Fanart 5">
+                    </div>
+                    <!-- 5. Haennir -->
+                    <div class="gallery-item" data-src="img/fanart/4m.gif" data-author="Haennir" data-desc="저지 메이드">
+                        <img src="img/fanart/4t.webp" class="pos-top" alt="Fanart 4">
+                    </div>
+                    <!-- 6. 쵸콜릿 -->
+                    <div class="gallery-item" data-src="img/fanart/8m.webp" data-author="쵸콜릿" data-desc="도트뫄"
+                        data-bg-white="true">
+                        <img src="img/fanart/8t.png" alt="Fanart 8">
+                    </div>
+                    <!-- 7. 뿔사탕 -->
+                    <div class="gallery-item" data-src="img/fanart/7.gif" data-author="뿔사탕" data-desc="냥냥냥 뫄"
+                        data-bg-white="true">
+                        <img src="img/fanart/7.gif" alt="Fanart 7">
+                    </div>
+                    <!-- 8. 제리앵두 -->
+                    <div class="gallery-item" data-src="img/fanart/9m.webp" data-author="제리앵두" data-desc="처음으로 그려봤습니다">
+                        <img src="img/fanart/9t.webp" alt="Fanart 9">
+                    </div>
+                    <!-- 9. 뉴블 -->
+                    <div class="gallery-item" data-src="img/fanart/1m.webp" data-author="뉴블"
+                        data-desc="1년에 한번 오는 그날이 왔네~">
+                        <img src="img/fanart/1t.webp" alt="Fanart 1">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: 팬영상 -->
+            <section id="theater" class="content-section hidden">
+                <h2 class="section-title">팬영상</h2>
+                <div class="theater-list">
+                    <!-- 3 YouTube Videos (Facade Pattern Applied) -->
+                    <div class="video-container facade" data-embed="V-qbXpRGRXg">
+                        <img src="https://img.youtube.com/vi/V-qbXpRGRXg/hqdefault.jpg" alt="YouTube Thumbnail"
+                            loading="lazy">
+                        <button class="play-button" aria-label="Play Video"></button>
+                    </div>
+                    <div class="video-container facade" data-embed="V-qbXpRGRXg">
+                        <img src="https://img.youtube.com/vi/V-qbXpRGRXg/hqdefault.jpg" alt="YouTube Thumbnail">
+                        <button class="play-button" aria-label="Play Video"></button>
+                    </div>
+                    <div class="video-container facade" data-embed="V-qbXpRGRXg">
+                        <img src="https://img.youtube.com/vi/V-qbXpRGRXg/hqdefault.jpg" alt="YouTube Thumbnail">
+                        <button class="play-button" aria-label="Play Video"></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: 후원자 -->
+            <section id="sponsors" class="content-section hidden">
+                <h2 class="section-title">후원자</h2>
+                <div class="sponsors-list">
+                    <!-- Tier 4 Sponsors -->
+                    <div class="sponsor-item tier-4">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">총아리</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/4.png" alt="얼빡 빵긋 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">300,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            모아님 그.. 생일은 축하드리는데... 그거 아세요?<br>아직 큰?거 남았다… 히히…
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-4">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">막살</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/4.png" alt="얼빡 빵긋 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">260,409원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            이번 탄신제도 잘 즐겨주시길 바랍니다 모두
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-4">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">시아데르</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/4.png" alt="얼빡 빵긋 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">200,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            작년에 이어 올해도 공주님의 탄신일을 축하드립니다.!<br>언제나 행복하시길!★
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+
+                    <!-- Tier 3 Sponsors -->
+                    <div class="sponsor-item tier-3">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">BlueHen</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/3.png" alt="불 뿜는 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">160,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            본 몰랑쿤은 뫄라노 공주님의 탄신일을 크게 감축드리옵니다.<br>몰랑쿤들이여 갈채하라!
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-3">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">김익명씨</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/3.png" alt="불 뿜는 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">100,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            생신 축하드립니다. - 어둠의 청초모아사랑단 일동 -
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-3">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">란기린</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/3.png" alt="불 뿜는 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">100,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            생일 축하드려요 모아님 앞으로도 잘부탁드립니다.
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-3">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">익명의 몰랑쿤</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/3.png" alt="불 뿜는 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">100,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            뫄라노가 태어나던 날,.온 세렝게티가 흔들렸단다..<br>모아님 생일 축하드립니다
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-3">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">팀민</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/3.png" alt="불 뿜는 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">100,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            항상 방송을 보면서 좋은 하루를 마무리하고있습니다 감사합니다.<br>생일 축하드립니다!!!
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-3">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">하얀눈별</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/3.png" alt="불 뿜는 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">100,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            ★우☆쥬★채☆강★기☆요★미☆뫄★라☆노★등☆쟝★<br>생일 축하드리옵니다. ㅇ3ㅇ
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-3">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">화굥</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/3.png" alt="불 뿜는 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">100,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            생일 축하는 드립니다 으흐흐..
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+
+                    <!-- Tier 2 Sponsors -->
+                    <div class="sponsor-item tier-2">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">달을삼킨커비</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/2.png" alt="불 뿜기 일보직전 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">50,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            나 몰랑쿤인데 모아 생일 축하해주러 왔다
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-2">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">디렉</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/2.png" alt="불 뿜기 일보직전 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">50,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            어제도 오늘도 내일도 언제까지나 항상 행복하시길 바라요.<br>모아님 생일 축하해요!
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-2">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">딸기맛치킨</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/2.png" alt="불 뿜기 일보직전 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">50,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            모아님. 생일 축하드려요!<br>모아님이 걷는 길에 함께하며 따뜻한 힘이 되어 드릴게요.
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-2">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">페르세페</span>
+                                <span class="sponsor-icon">
+                                    <img src="tier/2.png" alt="불 뿜기 일보직전 뫄라노">
+                                </span>
+                            </div>
+                            <span class="sponsor-amount">50,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            생일 축하드립니다
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+
+                    <!-- Tier 1 Sponsors -->
+                    <div class="sponsor-item tier-1">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">김몰랑쿤</span>
+                                <span class="sponsor-icon">🪺</span>
+                            </div>
+                            <span class="sponsor-amount">25,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            뫄님 일부러 여기서도 익명으로합니다 히히
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+                    <div class="sponsor-item tier-1">
+                        <div class="sponsor-header">
+                            <div class="sponsor-info-left">
+                                <span class="sponsor-name">동굴맨_</span>
+                                <span class="sponsor-icon">🪺</span>
+                            </div>
+                            <span class="sponsor-amount">10,000원</span>
+                        </div>
+                        <div class="sponsor-message">
+                            공주님 탄신일 오메데토
+                        </div>
+                        <div class="sponsor-ribbon">🎀</div>
+                    </div>
+
+                    <p class="notice-text notice-text--sponsors">
+                        ※ 후원 금액 및 가나다순으로 정렬되었습니다.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section: 방명록 -->
+            <section id="guestbook" class="content-section hidden">
+                <h2 class="section-title">방명록</h2>
+                <div class="guestbook-container">
+                    <form id="guestbook-form" class="guestbook-form">
+                        <div class="gb-input-row gb-input-row--single">
+                            <input type="text" id="gb-name" placeholder="이름 (생략가능, 최대 15자)" maxlength="15">
+                        </div>
+                        <textarea id="gb-message" placeholder="모아에게 축하 메시지를 남겨주세요! (최대 200자)" maxlength="200"
+                            required></textarea>
+
+                        <!-- 포커스 시 나타날 공지 박스 -->
+                        <div id="gb-focus-notice" class="gb-focus-notice">
+                            <span class="close-notice-btn" id="close-gb-notice">&times;</span>
+                            <strong class="warning-title">🚨 방명록 유의사항</strong>
+                            <ul class="gb-notice-list">
+                                <li class="danger-text">욕설, 정치, 타 몰랑쿤 닉언, 홍보, 수위 높은 글, 순위 언급, 대댓글 놀이(끝말놀이 포함),<br>
+                                    기타 다툼의 소지가 있거나 모아와 상관없는 글은 삭제될 수 있습니다.</li>
+                                <li>브라우저 쿠키 초기화 및 기기 변경 시 익명 글은 수정과 삭제가 어려우니 유의해 주세요.</li>
+                                <li>※ 축하 메시지는 <strong>4월 14일 자정(23:59)</strong>까지만 자유롭게 작성하실 수 있으며<br>
+                                    이후에는 소중한 추억으로 영구 보존됩니다! 🎁</li>
+                            </ul>
+                        </div>
+
+                        <div class="gb-submit-group"
+                            style="display: flex; gap: 10px; justify-content: center; width: 100%; align-items: flex-start; margin-top: 10px;">
+                            <button type="button" id="google-login-btn" class="google-btn"
+                                style="background-color: #fff; color: #555; border: 1px solid #ddd; padding: 0.8rem 1rem; font-size: 0.9rem; font-weight: 600; border-radius: 30px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;">
+                                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                    alt="Google" style="width: 18px; height: 18px;">
+                                구글 로그인
+                            </button>
+                            <div class="submit-wrapper"
+                                style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
+                                <button type="submit" class="primary-btn submit-btn"
+                                    style="width: 100%; margin: 0; padding: 0.8rem;">메시지 남기기</button>
+                                <span class="gb-deadline-text"
+                                    style="font-size: 0.75rem; color: #888; text-align: center;">(작성 가능 기간 ~ 4/14일
+                                    자정)</span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="guestbook-list" class="guestbook-list">
+                        <!-- Messages will appear here -->
+                    </div>
+                    <div class="guestbook-footer">
+                        <button id="load-more-btn" class="primary-btn hidden load-more-btn-spacing">더 보기</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: 크레딧 -->
+            <section id="credits" class="content-section hidden">
+                <h2 class="section-title">크레딧</h2>
+                <div class="credits-list">
+                    <p><strong>주최 / 기획</strong>총아리</p>
+                    <p><strong>일러스트</strong>원더<sup class="footnote" data-tooltip="A.K.A 썸넬러">[1]</sup>, 동굴맨_<sup
+                            class="footnote" data-tooltip="팬리지널 MV 일러스트">[2]</sup> </p>
+                    <p><strong>영상 제작</strong>화굥<sup class="footnote" data-tooltip="생일 축하 기념 영상 총괄">[3]</sup>, 레랜이<sup
+                            class="footnote" data-tooltip="팬리지널 MV 제작">[4]</sup> </p>
+                    <p><strong>음악 제작</strong>빈우주<sup class="footnote" data-tooltip="팬리지널 음악 및 BGM 제작">[5]</sup>, 권순우<sup
+                            class="footnote" data-tooltip="팬리지널 음악 드럼 작업">[6]</sup> </p>
+                    <p><strong>인터넷 생일 카페 제작</strong>얄미운 탐험가 5438</p>
+                    <p><strong>(자칭)세레니티 기획부</strong><s>지하실에서</s> 작당 모의하는 22명의 몰랑쿤들</p>
+
+                    <div class="secret-credit-area">
+                        <p><strong>𝑠𝑝𝑒𝑐𝑖𝑎𝑙 𝑡ℎ𝑎𝑛𝑘𝑠 𝑡𝑜</strong>모아 그리고 모든 팬분들
+                            <span class="hint-key">.</span>
+                        </p>
+                        <p class="hidden-drag-msg">[ ACCESS CODE : Ctrl + C ]</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer SNS -->
+        <footer>
+            <div class="sns-container">
+                <button class="sns-btn" data-sns="치지직">
+                    <img src="logo/chzzk.png" alt="Chzzk">
+                </button>
+                <button class="sns-btn" data-sns="유튜브">
+                    <img src="logo/youtube.png" alt="YouTube">
+                </button>
+                <button class="sns-btn" data-sns="인스타그램">
+                    <img src="logo/insta.png" alt="Instagram">
+                </button>
+                <button class="sns-btn" data-sns="네이버 카페">
+                    <img src="logo/cafe.png" alt="Naver Cafe">
+                </button>
+            </div>
+        </footer>
+    </section>
+
+    <dialog id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Enlarged Fanart">
+            <div class="modal-info">
+                <h3 id="modal-author"></h3>
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Modal for Edit Guestbook -->
+    <dialog id="edit-modal" class="modal">
+        <span class="close-edit-modal close-modal" aria-label="닫기">&times;</span>
+        <div class="modal-content">
+            <div class="modal-info edit-modal-info">
+                <h3 class="edit-modal-title">메시지 수정</h3>
+                <form id="edit-guestbook-form" class="guestbook-form edit-modal-form">
+                    <textarea id="edit-gb-message" class="edit-modal-textarea" placeholder="수정할 메시지를 입력하세요. (최대 200자)"
+                        maxlength="200" required></textarea>
+                    <button type="submit" class="primary-btn submit-btn edit-modal-submit">수정 완료</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="main.js" defer></script>
+    <script type="module" src="guestbook.js"></script>
+</body>
+
+</html>
