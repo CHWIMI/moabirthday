@@ -483,8 +483,8 @@
         const input = document.createElement('input');
         input.type = 'text';
         input.className = 'game-nickname-input';
-        input.placeholder = '닉네임 (최대 10자)';
-        input.maxLength = 10;
+        input.placeholder = '닉네임 (최대 6자)';
+        input.maxLength = 6;
         content.appendChild(input);
 
         // Submit button
