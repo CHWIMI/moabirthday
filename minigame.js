@@ -40,8 +40,8 @@
     const INITIAL_SPEED = 4;
     const MAX_SPEED = 12;
     const SPEED_INCREMENT = 0.002;
-    const OBSTACLE_MIN_GAP = 120;
-    const OBSTACLE_MAX_GAP = 200;
+    const OBSTACLE_MIN_GAP = 150;
+    const OBSTACLE_MAX_GAP = 250;
 
     // Theme colors (matching site's pastel pink)
     const COLOR_GROUND = '#FF8DA1';
