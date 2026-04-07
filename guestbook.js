@@ -88,7 +88,7 @@ const isGuestbookClosed = new Date() > GUESTBOOK_DEADLINE;
 
 let currentUser = null;
 let guestbookLoaded = false;
-let currentLimit = 20; // 2번 최적화: 초기 로드 20개로 제한
+let currentLimit = 3; // 2번 최적화: 초기 로드 20개로 제한
 let unsubscribe = null; // onSnapshot 리스너 해제용
 let isGuestbookVisible = false; // 방명록 탭 활성화 여부 확인
 
