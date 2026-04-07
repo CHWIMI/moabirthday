@@ -92,7 +92,7 @@ let currentLimit = 20; // 2번 최적화: 초기 로드 20개로 제한
 let unsubscribe = null; // onSnapshot 리스너 해제용
 let isGuestbookVisible = false; // 방명록 탭 활성화 여부 확인
 
-const ADMIN_UIDS = ["A9a96wJRgidw9jXUy2B4GhtmDsB2", "u8zt3TZGJ6MY5GAUB0az2zay4BP2", "kF24F9xGncYFhrqlKAVzsLUK39J2", "nGD0onrREdQ31Z8sC1ZTONQfnMV2"]; // 관리자 구글 UID를 여기에 입력
+const ADMIN_UIDS = ["A9a96wJRgidw9jXUy2B4GhtmDsB2", "u8zt3TZGJ6MY5GAUB0az2zay4BP2", "kF24F9xGncYFhrqlKAVzsLUK39J2", "nGD0onrREdQ31Z8sC1ZTONQfnMV2"];
 
 function isAdmin() {
     return currentUser && ADMIN_UIDS.includes(currentUser.uid);
