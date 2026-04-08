@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedText = window.getSelection().toString();
             if (selectedText.length > 0) {
                 event.preventDefault();
-                const hiddenMessage = selectedText + "\n\n[SYSTEM] SERENITY : TO BE CONTINUED...";
+                const hiddenMessage = selectedText + "\n\n경 ★ 모아님 탄신일 ★ 축";
 
                 if (event.clipboardData) {
                     event.clipboardData.setData('text/plain', hiddenMessage);
