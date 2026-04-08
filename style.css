@@ -85,6 +85,7 @@ button {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--bg-color) 0%, var(--secondary-color) 100%);
+    position: relative;
 }
 
 .intro-content {
@@ -96,6 +97,21 @@ button {
     backdrop-filter: blur(10px);
     width: 90%;
     max-width: 500px;
+    z-index: 1;
+}
+
+.intro-disclaimer {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--black);
+    opacity: 0.6;
+    width: 90%;
+    text-align: center;
+    pointer-events: none;
+    word-break: keep-all;
 }
 
 .main-title {
