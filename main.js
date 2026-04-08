@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedText = window.getSelection().toString();
             if (selectedText.length > 0) {
                 event.preventDefault();
-                const hiddenMessage = selectedText + "\n\n경 ☆ 모아님 탄신일 ★ 축";
+                const hiddenMessage = selectedText + "\n\n[SYSTEM] SERENITY : TO BE CONTINUED...";
 
                 if (event.clipboardData) {
                     event.clipboardData.setData('text/plain', hiddenMessage);
@@ -474,73 +474,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startTimeWalker() {
         isTimeEggActive = true;
-        const creditsList = document.querySelector('.credits-list');
-        if (!creditsList) return;
+
+        // 33% 방명록, 33% 팬아트, 33% 팬영상, 1% 전광판
+        const rand = Math.floor(Math.random() * 100);
+        let targetId = '';
+        if (rand < 33) {
+            targetId = 'guestbook';
+        } else if (rand < 66) {
+            targetId = 'gallery';
+        } else if (rand < 99) {
+            targetId = 'theater';
+        } else {
+            targetId = 'billboard';
+        }
+
+        const targetContainer = document.getElementById(targetId);
+        if (!targetContainer) return;
+
+        // 원본 스타일 저장 및 임시로 relative/hidden 적용 (섹션 내 가두기 위함)
+        const originalPosition = targetContainer.style.position;
+        const originalOverflow = targetContainer.style.overflow;
+        targetContainer.style.position = 'relative';
+        targetContainer.style.overflow = 'hidden';
 
         const walker = document.createElement('img');
         walker.src = 'img/egg.gif';
         walker.alt = '';
         walker.classList.add('egg-walker');
-        walker.style.top = '10px';
-        walker.style.left = '20px';
+        walker.style.position = 'absolute';
+        walker.style.top = '10%';
+        walker.style.left = '10%';
         walker.style.opacity = '0';
         walker.style.transition = 'opacity 0.6s ease';
-        creditsList.appendChild(walker);
-
-        // 텍스트 요소 위치 계산 (충돌 회피용)
-        function getTextRects() {
-            const listRect = creditsList.getBoundingClientRect();
-            const children = creditsList.querySelectorAll('p, .secret-credit-area');
-            return Array.from(children).map(el => {
-                const r = el.getBoundingClientRect();
-                return {
-                    left: r.left - listRect.left - 8,
-                    top: r.top - listRect.top - 8,
-                    right: r.right - listRect.left + 8,
-                    bottom: r.bottom - listRect.top + 8,
-                };
-            });
-        }
-
-        function overlapsText(x, y, textRects) {
-            return textRects.some(tr =>
-                x < tr.right && (x + 48) > tr.left &&
-                y < tr.bottom && (y + 48) > tr.top
-            );
-        }
+        walker.style.zIndex = '9999';
+        walker.style.pointerEvents = 'none'; // 방명록 폼 클릭 등에 방해되지 않도록 방지
+        targetContainer.appendChild(walker);
 
         // 페이드 인
         requestAnimationFrame(() => {
             requestAnimationFrame(() => { walker.style.opacity = '1'; });
         });
 
-        // 랜덤 워크 (글자 회피)
+        // 랜덤 워크 (글자 회피 제거)
         let walkTimeout;
+        let currentLeftPct = 10;
+
         function randomWalk() {
-            const maxX = creditsList.offsetWidth - 58;
-            const maxY = creditsList.offsetHeight - 58;
-            const textRects = getTextRects();
-
-            let targetX, targetY;
-            let attempts = 0;
-            do {
-                targetX = 10 + Math.random() * Math.max(0, maxX);
-                targetY = 10 + Math.random() * Math.max(0, maxY);
-                attempts++;
-            } while (overlapsText(targetX, targetY, textRects) && attempts < 30);
-
-            const currentLeft = parseFloat(walker.style.left) || 20;
+            // 퍼센티지(%) 단위로 이동 (0% ~ 90%)
+            const targetX = Math.random() * 90;
+            const targetY = Math.random() * 90;
 
             // 이동 방향에 따라 좌우 반전
-            if (targetX < currentLeft) {
+            if (targetX < currentLeftPct) {
                 walker.style.transform = 'scaleX(-1)';
             } else {
                 walker.style.transform = 'scaleX(1)';
             }
 
+            currentLeftPct = targetX;
+
             walker.style.transition = 'left 2.5s ease-in-out, top 2.5s ease-in-out, opacity 0.6s ease, transform 0.15s';
-            walker.style.left = targetX + 'px';
-            walker.style.top = targetY + 'px';
+            walker.style.left = targetX + '%';
+            walker.style.top = targetY + '%';
 
             walkTimeout = setTimeout(randomWalk, 2800 + Math.random() * 1200);
         }
@@ -566,6 +561,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     walker.remove();
                     isTimeEggActive = false;
+                    // 기존 스타일 복원
+                    targetContainer.style.position = originalPosition;
+                    targetContainer.style.overflow = originalOverflow;
                 }, 900);
             });
         }, 60000);
