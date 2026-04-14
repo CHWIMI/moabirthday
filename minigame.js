@@ -704,7 +704,7 @@
 
         // Show start overlay
         overlayTitle.textContent = '모아를 잡았다!';
-        overlaySubtitle.innerHTML = '화면 터치/스페이스바 로 시작<br><span style="font-size:0.85rem; color:#aaa;">공중에 있을 때 아래 화살표(⬇) 또는 <strong>한 번 더 터치</strong>하면 빠른 낙하!</span>';
+        overlaySubtitle.innerHTML = '화면 터치/스페이스바 로 시작<br>누르는 시간에 따라 체공 시간이 달라집니다!<br><span style="font-size:0.85rem; color:#aaa;">공중에 있을 때 아래 화살표(⬇) 또는 <strong>한 번 더 터치</strong>하면 빠른 낙하!</span>';
         overlay.classList.remove('hidden-overlay');
         // Clean up any leftover input/btn
         const existingInput = overlay.querySelector('.game-nickname-input');
